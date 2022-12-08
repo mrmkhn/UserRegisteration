@@ -3,6 +3,7 @@
 namespace Modules\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Modules\User\Console\Commands\Register;
 use Modules\User\Models\User;
 
 class UserServiceProvider extends ServiceProvider
@@ -27,6 +28,8 @@ class UserServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         $this->loadViewsFrom(__DIR__ . '/../Resources/views', 'user');
+        $this->commands([Register::class]);
+
     }
 }
 
