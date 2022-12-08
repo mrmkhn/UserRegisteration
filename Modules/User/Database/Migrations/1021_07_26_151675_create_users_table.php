@@ -17,9 +17,6 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('mobile');
             $table->string('nationalCode');
-            $table->bigInteger('created_by')->nullable();
-            $table->bigInteger('updated_by')->nullable();
-            $table->bigInteger('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

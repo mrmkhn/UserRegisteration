@@ -12,4 +12,9 @@
 */
 
 
+Route::namespace('Modules\User\Http\Controllers')->middleware('web')->group(function() {
+
+    Route::get('/insert', 'UserController@insert');
+});
+
 

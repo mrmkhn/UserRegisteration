@@ -3,9 +3,11 @@
 namespace Modules\User\Console\Commands;
 
 use Illuminate\Console\Command;
+use Modules\User\Http\Controllers\UserController;
 
 class Register extends Command
 {
+    private $userController;
     /**
      * The name and signature of the console command.
      *
@@ -25,9 +27,11 @@ class Register extends Command
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(UserController $userController)
     {
         parent::__construct();
+        $this->userController=$userController;
+
     }
 
     /**
@@ -37,6 +41,6 @@ class Register extends Command
      */
     public function handle()
     {
-        return 0;
+        $this->userController->insert();
     }
 }
