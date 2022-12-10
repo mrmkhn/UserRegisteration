@@ -8,4 +8,11 @@ class UserRepository
 {
 
 
+    public function create($row)
+    {
+         User::create([
+            'mobile'=>$row['mobile'],
+            'nationalCode'=>$row['nationalCode'],
+        ]);
+    }
 }
