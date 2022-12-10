@@ -1,7 +1,7 @@
 
 ## About UserRegistration
 
-UserRegistration is a modular application for insert into database use artisan command:
+UserRegistration is a modular application for insert into database use artisan command
 
 
 ## usage
